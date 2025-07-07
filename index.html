@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lav Saxena | Portfolio</title>
+  <link rel="stylesheet" href="style_chocolate.css" />
+  <style>
+    #skills-content, #education-content, #experience-content, #projects-content,
+    #certificates-content, #achievements-content, #leadership-content,
+    #languages-content, #contact-content {
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      overflow: hidden;
+    }
+    .expanded { max-height: 500px; opacity: 1; }
+    .collapsed { max-height: 0; opacity: 0; }
+    body {
+      background: linear-gradient(to right, #0d1b2a, #1b263b);
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-bottom: 50px;
+    }
+    section {
+      margin: 30px auto;
+      max-width: 900px;
+      border-bottom: 1px solid #333;
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(255, 152, 0, 0.1);
+    }
+    h1.terminal-banner {
+      text-align: center;
+      font-size: 3rem;
+      color: #ff9800;
+      text-shadow: 0 0 8px #ff9800;
+    }
+    .terminal-welcome-msg {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #aaa;
+    }
+    h2.color2 {
+      font-size: 1.6em;
+      color: #ffc107;
+      border-left: 5px solid #ff9800;
+      padding-left: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    a { color: #ffa726; text-decoration: none; }
+    a:hover { color: #fff176; text-decoration: underline; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .profile-pic {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .profile-pic img {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255, 152, 0, 0.4);
+      border: 2px solid #ff9800;
+      object-fit: cover;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "🚀 Aspiring Software Engineer | Web Dev & Java Enthusiast | ML Explorer | Hackathon Winner ";
+      let i = 0;
+      const typeSpeed = 60;
+      const target = document.getElementById("headline-typewriter");
+
+      function typeWriter() {
+        if (i < text.length) {
+          target.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, typeSpeed);
+        }
+      }
+
+      typeWriter();
+    });
+
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle("expanded");
+      section.classList.toggle("collapsed");
+    }
+    function toggleSkills() {
+      var skills = document.getElementById("skills-content");
+      skills.classList.toggle('expanded');
+      skills.classList.toggle('collapsed');
+    }
+  </script>
+</head>
+<body>
+  <div class="profile-pic">
+    <a href="https://www.linkedin.com/in/lav-saxena-7995032b6" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQHfWagqecNuQg/profile-displayphoto-shrink_400_400/B4DZafmNQ8G8Ag-/0/1746434317090?e=1757548800&v=beta&t=DZClBosdPOAK4U74K_okwIsrxidSQHGtNB1yyvHIzIY" alt="Lav Saxena">
+    </a>
+  </div>
+  <h1 class="terminal-banner">Lav Saxena</h1>
+  <p class="terminal-welcome-msg" id="headline-typewriter"></p>
+
+  <section class="margin" id="contact">
+    <h2 class="color2" onclick="toggleSection('contact-content')">
+      <span>Contact</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="contact-content" class="collapsed">
+      <p>Email: <a href="mailto:Saxenalav2005@gmail.com">Saxenalav2005@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918299877219">+91-8299877219</a></p>
+      <p>Location: Farrukhabad, Uttar Pradesh, India</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/lav-saxena-7995032b6">lav-saxena</a></p>
+      <p>GitHub: <a href="https://github.com/LavSaxena2005">LavSaxena2005</a></p>
+    </div>
+  </section>
+  <section class="margin" id="education">
+    <h2 class="color2" onclick="toggleSection('education-content')">
+      <span>Education</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="education-content" class="collapsed">
+      <p>B.Tech IT, Amity University Rajasthan (2023–2027) | CGPA: 8.45</p>
+      <p>XII (ISC), Modern Public School, Farrukhabad (2022–2023)</p>
+    </div>
+  </section>
+
+  <section class="margin" id="experience">
+    <h2 class="color2" onclick="toggleSection('experience-content')">
+      <span>Experience</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="experience-content" class="collapsed">
+      <p><b>Software Development Intern</b>, Prodigy InfoTech (Jun 2025 – Present)<br>
+      Remote internship with Java and Python projects.</p>
+      <p><b>Senior Developer</b>, RAIoT Labs – Amity University (Sep 2024 – Present)<br>
+      Embedded systems and IoT development.</p>
+      <p><b>ML Intern</b>, Cognifyz Technologies (Feb–Mar 2025)<br>
+      Created an NLP-based restaurant rating prediction system.</p>
+    </div>
+  </section>
+
+  <section class="margin" id="projects">
+    <h2 class="color2" onclick="toggleSection('projects-content')">
+      <span>Projects</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="projects-content" class="collapsed">
+      <p><b><a href="https://github.com/LavSaxena2005/EW-PROJECT">EW Project</a></b><br>
+      Responsive educational site using HTML/CSS.</p>
+      <p><b><a href="https://github.com/LavSaxena2005/Phishing-website-detection">Phishing Detection</a></b><br>
+      ML system using Random Forest (96.22% accuracy).</p>
+      <p><b><a href="https://github.com/LavSaxena2005/email-spam-detection">Email Spam Detector</a></b><br>
+      Classified emails with NLP + ML.</p>
+      <p><b><a href="https://github.com/LavSaxena2005/crop-analysis">Crop Analysis</a></b><br>
+      Crop data visualized using Python,IOT, and plots.</p>
+      <p><b><a href="https://github.com/LavSaxena2005/Machine-Learning">ML Restaurant</a></b><br>
+      Core algorithms and experiments using Python.</p>
+      <p><b><a href="https://www.linkedin.com/posts/lav-saxena-7995032b6_webdevelopment-amityuniversity-html-activity-7262179878072897536-v1BB">Amity University Website</a></b><br>
+      Campus portal made with HTML and CSS.</p>
+    </div>
+  </section>
+
+  <section class="margin" id="skills">
+    <h2 class="color2" onclick="toggleSection('skills-content')">
+      <span>Skills</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="skills-content" class="collapsed">
+      <p><b>Languages:</b> Java, Python, C, HTML, CSS</p>
+      <p><b>Tools:</b> VS Code, GitHub, AWS, Jupyter</p>
+      <p><b>Others:</b> DBMS, OS, Machine Learning, DSA</p>
+    </div>
+  </section>
+
+  <section class="margin" id="certificates">
+    <h2 class="color2" onclick="toggleSection('certificates-content')">
+      <span>Certificates</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="certificates-content" class="collapsed">
+      <ul>
+        <li>Microsoft Azure AI Fundamentals</li>
+        <li>C Training – IIT Bombay</li>
+        <li>Basic Java – HackerRank</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="margin" id="achievements">
+    <h2 class="color2" onclick="toggleSection('achievements-content')">
+      <span>Achievements</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="achievements-content" class="collapsed">
+      <ul>
+        <li>Top 10 Finalist – IIT Bombay Techfest</li>
+        <li>1st Place – Innovations Day, AUR</li>
+        <li>2nd Place – The Whack Hackathon 3.0</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="margin" id="leadership">
+    <h2 class="color2" onclick="toggleSection('leadership-content')">
+      <span>Leadership</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="leadership-content" class="collapsed">
+      <ul>
+        <li>Senior Developer – RAIoT Labs, AUR</li>
+        <li>Technical Head – Avasa Foundation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="margin" id="languages">
+    <h2 class="color2" onclick="toggleSection('languages-content')">
+      <span>Languages</span><span style="font-size: 1.2em; color: #888;">▶</span>
+    </h2>
+    <div id="languages-content" class="collapsed">
+      <p>Hindi, English</p>
+    </div>
+  </section>
+</body>
+</html>
